@@ -17,5 +17,7 @@
     <string name="undo">C</string>
     <string name="equal">=</string>
     <string name="dot">.</string>
-
+    <string name="powerOf">^</string>
+    <string name="leftBracket">(</string>
+    <string name="rightBracket">)</string>
 </resources>
