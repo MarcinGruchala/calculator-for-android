@@ -129,10 +129,4 @@ class MainActivity : AppCompatActivity() {
     private fun updateScreen(screen: String){
         tvResult.text = screen
     }
-
-    private fun updateFirstNumber(){
-
-    }
-
-
 }
