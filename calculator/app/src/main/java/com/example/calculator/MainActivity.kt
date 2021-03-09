@@ -12,6 +12,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var screen = ""
+        var numberOne = 0
+        var numberTwo = 0
+        var operation = ""
+        var indexOfOperationButton=0
+        var result = 0
 
         btnZero.setOnClickListener(){
             screen += "0"
@@ -21,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         btnOne.setOnClickListener() {
             screen += "1"
             updateScreen(screen)
+
         }
 
         btnTwo.setOnClickListener(){
@@ -76,25 +82,46 @@ class MainActivity : AppCompatActivity() {
         btnPlus.setOnClickListener(){
             screen += "+"
             updateScreen(screen)
+            numberOne = screen.subSequence(0,screen.length-1).toString().toInt()
+            operation = "+"
+            indexOfOperationButton = screen.length-1
         }
 
         btnMinus.setOnClickListener(){
             screen += "-"
             updateScreen(screen)
+            numberOne = screen.subSequence(0,screen.length-1).toString().toInt()
+            operation = "-"
+            indexOfOperationButton = screen.length-1
         }
 
         btnMultiply.setOnClickListener(){
             screen += "X"
             updateScreen(screen)
+            numberOne = screen.subSequence(0,screen.length-1).toString().toInt()
+            operation = "X"
+            indexOfOperationButton = screen.length-1
         }
 
         btnDivide.setOnClickListener(){
             screen += "/"
             updateScreen(screen)
+            numberOne = screen.subSequence(0,screen.length-1).toString().toInt()
+            operation = "/"
+            indexOfOperationButton = screen.length-1
         }
 
         btnEqual.setOnClickListener(){
             screen += "="
+            updateScreen(screen)
+            numberTwo = screen.subSequence(indexOfOperationButton+1,screen.length-1).toString().toInt()
+            when(operation){
+                "+" -> result = numberOne+numberTwo
+                "-" ->result = numberOne-numberTwo
+                "/" ->result = numberOne/numberTwo
+                "*" ->result = numberOne*numberTwo
+            }
+            screen += result.toString()
             updateScreen(screen)
         }
     }
@@ -102,5 +129,10 @@ class MainActivity : AppCompatActivity() {
     private fun updateScreen(screen: String){
         tvResult.text = screen
     }
+
+    private fun updateFirstNumber(){
+
+    }
+
 
 }
