@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/background">
 
     <TextView
         android:id="@+id/tvResult"
@@ -16,6 +17,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text=""
+        android:textColor="@color/screenText"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -38,28 +41,44 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/powerOf" />
+                android:background="@color/button"
+                android:text="@string/powerOf"
+                android:textColor="@color/buttonText"
+                android:textSize="24sp"
+                app:backgroundTint="@color/button" />
 
             <Button
                 android:id="@+id/btnLeftBracket"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/leftBracket" />
+                android:background="@color/button"
+                android:text="@string/leftBracket"
+                android:textColor="@color/buttonText"
+                android:textSize="24sp"
+                app:backgroundTint="@color/button" />
 
             <Button
                 android:id="@+id/btnRightBracket"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/rightBracket" />
+                android:background="@color/button"
+                android:text="@string/rightBracket"
+                android:textColor="@color/buttonText"
+                android:textSize="24sp"
+                app:backgroundTint="@color/button" />
 
             <Button
                 android:id="@+id/btnDivide"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/divide" />
+                android:background="@color/button"
+                android:text="@string/divide"
+                android:textColor="@color/buttonText"
+                android:textSize="24sp"
+                app:backgroundTint="@color/button" />
         </TableRow>
 
         <TableRow
@@ -71,28 +90,44 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/seven" />
+                android:background="@color/button"
+                android:text="@string/seven"
+                android:textColor="@color/buttonText"
+                android:textSize="24sp"
+                app:backgroundTint="@color/button" />
 
             <Button
                 android:id="@+id/btnEight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/eight" />
+                android:background="@color/button"
+                android:text="@string/eight"
+                android:textColor="@color/buttonText"
+                android:textSize="24sp"
+                app:backgroundTint="@color/button" />
 
             <Button
                 android:id="@+id/btnNine"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/nine" />
+                android:background="@color/button"
+                android:text="@string/nine"
+                android:textColor="@color/buttonText"
+                android:textSize="24sp"
+                app:backgroundTint="@color/button" />
 
             <Button
                 android:id="@+id/btnMultiply"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/multiply" />
+                android:background="@color/button"
+                android:text="@string/multiply"
+                android:textColor="@color/buttonText"
+                android:textSize="24sp"
+                app:backgroundTint="@color/button" />
 
         </TableRow>
 
@@ -105,28 +140,44 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/four" />
+                android:background="@color/button"
+                android:text="@string/four"
+                android:textColor="@color/buttonText"
+                android:textSize="24sp"
+                app:backgroundTint="@color/button" />
 
             <Button
                 android:id="@+id/btnFive"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/five" />
+                android:background="@color/button"
+                android:text="@string/five"
+                android:textColor="@color/buttonText"
+                android:textSize="24sp"
+                app:backgroundTint="@color/button" />
 
             <Button
                 android:id="@+id/btnSix"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/six" />
+                android:background="@color/button"
+                android:text="@string/six"
+                android:textColor="@color/buttonText"
+                android:textSize="24sp"
+                app:backgroundTint="@color/button" />
 
             <Button
                 android:id="@+id/btnMinus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/minus" />
+                android:background="@color/button"
+                android:text="@string/minus"
+                android:textColor="@color/buttonText"
+                android:textSize="24sp"
+                app:backgroundTint="@color/button" />
 
         </TableRow>
 
@@ -139,28 +190,44 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/one" />
+                android:background="@color/button"
+                android:text="@string/one"
+                android:textColor="@color/buttonText"
+                android:textSize="24sp"
+                app:backgroundTint="@color/button" />
 
             <Button
                 android:id="@+id/btnTwo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/two" />
+                android:background="@color/button"
+                android:text="@string/two"
+                android:textColor="@color/buttonText"
+                android:textSize="24sp"
+                app:backgroundTint="@color/button" />
 
             <Button
                 android:id="@+id/btnThree"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/three" />
+                android:background="@color/button"
+                android:text="@string/three"
+                android:textColor="@color/buttonText"
+                android:textSize="24sp"
+                app:backgroundTint="@color/button" />
 
             <Button
                 android:id="@+id/btnPlus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/plus" />
+                android:background="@color/button"
+                android:text="@string/plus"
+                android:textColor="@color/buttonText"
+                android:textSize="24sp"
+                app:backgroundTint="@color/button" />
         </TableRow>
 
         <TableRow
@@ -172,28 +239,44 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/zero" />
+                android:background="@color/button"
+                android:text="@string/zero"
+                android:textColor="@color/buttonText"
+                android:textSize="24sp"
+                app:backgroundTint="@color/button" />
 
             <Button
                 android:id="@+id/btnDot"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/dot" />
+                android:background="@color/button"
+                android:text="@string/dot"
+                android:textColor="@color/buttonText"
+                android:textSize="24sp"
+                app:backgroundTint="@color/button" />
 
             <Button
                 android:id="@+id/btnUndo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/undo" />
+                android:background="@color/button"
+                android:text="@string/undo"
+                android:textColor="@color/buttonText"
+                android:textSize="24sp"
+                app:backgroundTint="@color/button" />
 
             <Button
                 android:id="@+id/btnEqual"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/equal" />
+                android:background="@color/button"
+                android:text="@string/equal"
+                android:textColor="@color/buttonText"
+                android:textSize="24sp"
+                app:backgroundTint="@color/button" />
 
         </TableRow>
     </TableLayout>
@@ -207,6 +290,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text=""
+        android:textColor="@color/screenText"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvResult" />
