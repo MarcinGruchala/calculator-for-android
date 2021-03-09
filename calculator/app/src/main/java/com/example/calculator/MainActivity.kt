@@ -119,7 +119,7 @@ class MainActivity : AppCompatActivity() {
                 "+" -> result = numberOne+numberTwo
                 "-" ->result = numberOne-numberTwo
                 "/" ->result = numberOne/numberTwo
-                "*" ->result = numberOne*numberTwo
+                "X" ->result = numberOne * numberTwo
             }
             screen += result.toString()
             updateScreen(screen)
