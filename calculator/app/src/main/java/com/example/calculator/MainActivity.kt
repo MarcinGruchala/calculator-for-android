@@ -69,6 +69,16 @@ class MainActivity : AppCompatActivity() {
             updateScreen(screen)
         }
 
+        btnLeftBracket.setOnClickListener(){
+            screen += "("
+            updateScreen(screen)
+        }
+
+        btnRightBracket.setOnClickListener(){
+            screen +=")"
+            updateScreen(screen)
+        }
+
         btnUndo.setOnClickListener(){
             screen = screen.dropLast(1)
             updateScreen(screen)
@@ -96,6 +106,11 @@ class MainActivity : AppCompatActivity() {
             screen += "/"
             updateScreen(screen)
 
+        }
+
+        btnPowerOff.setOnClickListener(){
+            screen += "^"
+            updateScreen(screen)
         }
 
         btnEqual.setOnClickListener(){
