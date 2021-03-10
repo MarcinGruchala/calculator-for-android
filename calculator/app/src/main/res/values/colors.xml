@@ -8,7 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="background">#202020</color>
-    <color name="screenText">#5F2FB5</color>  //TODO screen text is too dark
+    <color name="screenText">#8344F4</color>  
     <color name="button">#BB86FC</color>
     <color name="buttonText">#FF000000</color>
 </resources>
