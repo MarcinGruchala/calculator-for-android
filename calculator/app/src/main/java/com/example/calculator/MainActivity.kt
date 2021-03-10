@@ -2,7 +2,6 @@ package com.example.calculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -12,115 +11,155 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var screen = ""
+        var equation = Equation()
 
         btnZero.setOnClickListener(){
-            screen += "0"
+            val clickedSign = "0"
+            screen += clickedSign
+            equation.addElement(clickedSign)
             updateScreen(screen)
         }
 
         btnOne.setOnClickListener() {
-            screen += "1"
+            val clickedSign =  "1"
+            screen += clickedSign
+            equation.addElement(clickedSign)
             updateScreen(screen)
 
         }
 
         btnTwo.setOnClickListener(){
-            screen += "2"
+            val clickedSign =  "2"
+            screen += clickedSign
+            equation.addElement(clickedSign)
             updateScreen(screen)
         }
 
         btnThree.setOnClickListener(){
-            screen += "3"
+            val clickedSign =  "3"
+            screen += clickedSign
+            equation.addElement(clickedSign)
             updateScreen(screen)
         }
 
         btnFour.setOnClickListener(){
-            screen += "4"
+            val clickedSign =  "4"
+            screen += clickedSign
+            equation.addElement(clickedSign)
             updateScreen(screen)
         }
 
         btnFive.setOnClickListener(){
-            screen += "5"
+            val clickedSign =  "5"
+            screen += clickedSign
+            equation.addElement(clickedSign)
             updateScreen(screen)
         }
 
         btnSix.setOnClickListener() {
-            screen += "6"
+            val clickedSign =  "6"
+            screen += clickedSign
+            equation.addElement(clickedSign)
             updateScreen(screen)
         }
 
         btnSeven.setOnClickListener(){
-            screen += "7"
+            val clickedSign =  "7"
+            screen += clickedSign
+            equation.addElement(clickedSign)
             updateScreen(screen)
         }
 
         btnEight.setOnClickListener(){
-            screen += "8"
+            val clickedSign =  "8"
+            screen += clickedSign
+            equation.addElement(clickedSign)
             updateScreen(screen)
         }
 
         btnNine.setOnClickListener(){
-            screen += "9"
+            val clickedSign =  "9"
+            screen += clickedSign
+            equation.addElement(clickedSign)
             updateScreen(screen)
         }
 
         btnDot.setOnClickListener(){
-            screen += "."
+            val clickedSign =  "."
+            screen += clickedSign
+            equation.addElement(clickedSign)
             updateScreen(screen)
         }
 
         btnLeftBracket.setOnClickListener(){
-            screen += "("
+            val clickedSign =  "("
+            screen += clickedSign
+            equation.addElement(clickedSign)
             updateScreen(screen)
         }
 
         btnRightBracket.setOnClickListener(){
-            screen +=")"
+            val clickedSign = ")"
+            screen += clickedSign
+            equation.addElement(clickedSign)
             updateScreen(screen)
         }
 
         btnUndo.setOnClickListener(){
             screen = screen.dropLast(1)
+            equation.removeLastElement()
             updateScreen(screen)
         }
 
         btnPlus.setOnClickListener(){
-            screen += "+"
+            val clickedSign =  "+"
+            screen += clickedSign
+            equation.addElement(clickedSign)
             updateScreen(screen)
 
         }
 
         btnMinus.setOnClickListener(){
-            screen += "-"
+            val clickedSign =  "-"
+            screen += clickedSign
+            equation.addElement(clickedSign)
             updateScreen(screen)
 
         }
 
         btnMultiply.setOnClickListener(){
-            screen += "X"
+            val clickedSign =  "X"
+            screen += clickedSign
+            equation.addElement(clickedSign)
             updateScreen(screen)
 
         }
 
         btnDivide.setOnClickListener(){
-            screen += "/"
+            val clickedSign =  "/"
+            screen += clickedSign
+            equation.addElement(clickedSign)
             updateScreen(screen)
 
         }
 
         btnPowerOff.setOnClickListener(){
-            screen += "^"
+            val clickedSign =  "^"
+            screen += clickedSign
+            equation.addElement(clickedSign)
             updateScreen(screen)
         }
 
         btnEqual.setOnClickListener(){
-            screen += "="
+            val clickedSign =  "="
+            screen += clickedSign
+            equation.addElement(clickedSign)
             updateScreen(screen)
 
         }
     }
 
     private fun updateScreen(screen: String){
-        tvResult.text = screen
+        tvLowerScreen.text = screen
     }
 }

@@ -8,7 +8,7 @@
     android:background="@color/background">
 
     <TextView
-        android:id="@+id/tvResult"
+        android:id="@+id/tvUpperScreen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -29,7 +29,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/tvLowerScreen"
         app:layout_constraintVertical_bias="0.82">
 
         <TableRow
@@ -282,7 +282,7 @@
     </TableLayout>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tvLowerScreen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -294,6 +294,6 @@
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvResult" />
+        app:layout_constraintTop_toBottomOf="@+id/tvUpperScreen" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
