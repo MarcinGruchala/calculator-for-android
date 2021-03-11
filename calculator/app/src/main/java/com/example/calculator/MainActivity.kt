@@ -115,8 +115,7 @@ class MainActivity : AppCompatActivity() {
             val clickedSign =  "+"
             screen += clickedSign
             equation.addElement(clickedSign)
-            //equation.updateOperations()
-            //equation.updateNumbers()
+
             updateScreen(screen)
 
         }
@@ -125,7 +124,6 @@ class MainActivity : AppCompatActivity() {
             val clickedSign =  "-"
             screen += clickedSign
             equation.addElement(clickedSign)
-            //equation.updateNumbers()
             updateScreen(screen)
 
         }
@@ -134,7 +132,6 @@ class MainActivity : AppCompatActivity() {
             val clickedSign =  "X"
             screen += clickedSign
             equation.addElement(clickedSign)
-            //equation.updateNumbers()
             updateScreen(screen)
 
         }
@@ -143,7 +140,6 @@ class MainActivity : AppCompatActivity() {
             val clickedSign =  "/"
             screen += clickedSign
             equation.addElement(clickedSign)
-            //equation.updateNumbers()
             updateScreen(screen)
 
         }
@@ -152,17 +148,15 @@ class MainActivity : AppCompatActivity() {
             val clickedSign =  "^"
             screen += clickedSign
             equation.addElement(clickedSign)
-            //equation.updateNumbers()
             updateScreen(screen)
         }
 
         btnEqual.setOnClickListener(){
             val clickedSign =  "="
-            screen += clickedSign
             equation.addElement(clickedSign)
-            //equation.solve()
+            equation.decode()
+            screen += clickedSign + equation.solve()
             updateScreen(screen)
-
         }
     }
 
