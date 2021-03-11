@@ -17,6 +17,8 @@ class Equation(var notation: String = "") {
 
 
     fun decode(){
+        numbers.clear()
+        operations.clear()
         val equationElements: MutableList<Char> = notation.toMutableList()
         var numberStart = 0 // current number beginning index
         var numberEnd = 0 // current Operation Index
@@ -42,6 +44,12 @@ class Equation(var notation: String = "") {
                 }
                 '-' -> {
                     operationsResult -= numbers[index+1]
+                }
+                'X' ->{
+
+                }
+                '/' ->{
+
                 }
                 '=' -> return  operationsResult
             }
