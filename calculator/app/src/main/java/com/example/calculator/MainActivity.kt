@@ -106,8 +106,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnUndo.setOnClickListener(){
-            screen = screen.dropLast(1)
-            equation.removeLastElement()
+            screen = ""
+            equation.clear()
             updateScreen(screen)
         }
 

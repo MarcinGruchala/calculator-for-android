@@ -15,6 +15,10 @@ class Equation(var notation: String = "") {
         notation = notation.dropLast(1)
     }
 
+    fun clear(){
+        notation = ""
+    }
+
 
     fun decode(){
         numbers.clear()
