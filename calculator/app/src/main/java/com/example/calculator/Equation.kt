@@ -35,6 +35,65 @@ class Equation(var notation: String = "") {
         }
     }
 
+    fun equationSimplify(){
+        var simplify = true
+        while (simplify){
+            var currentOperationIndex = 0
+            for (operationIndex in operations.indices){
+                if(operations[operationIndex] == 'X' || operations[operationIndex]=='/'){
+                    simplify=true
+                    currentOperationIndex = operationIndex
+                    break
+                }
+                else{
+                    simplify=false
+                }
+            }
+
+            if(operations[currentOperationIndex] == 'X' || operations[currentOperationIndex]=='/') {
+                var tmpOperationResult = 0.0
+                when (operations[currentOperationIndex]) {
+                    'X' -> tmpOperationResult = numbers[currentOperationIndex] * numbers[currentOperationIndex + 1]
+                    '/' -> tmpOperationResult = numbers[currentOperationIndex] / numbers[currentOperationIndex + 1]
+                }
+
+                var operationIndexInNotation = 0
+                val equationElements: MutableList<Char> = notation.toMutableList()
+                for (notationIndex in equationElements.indices) {
+                    if (notation[notationIndex] == operations[currentOperationIndex]) {
+                        operationIndexInNotation = notationIndex
+                        break
+                    }
+                }
+
+                var leftOperation = 0
+                for (i in operationIndexInNotation - 1 downTo 0 step 1) {
+                    if (notation[i] in operationElements) {
+                        leftOperation = i
+                        break
+                    }
+                }
+                var rightOperation = 0
+                for (i in operationIndexInNotation + 1 until notation.length) {
+                    if (notation[i] in operationElements) {
+                        rightOperation = i
+                        break
+                    }
+                }
+                if (leftOperation == 0)
+                    notation =
+                            tmpOperationResult.toString() + notation.subSequence(rightOperation, notation.length).toString()
+                else
+                    notation = notation.subSequence(0, leftOperation + 1)
+                            .toString() + tmpOperationResult.toString() + notation.subSequence(
+                            rightOperation,
+                            notation.length
+                    ).toString()
+                decode()
+            }
+        }
+    }
+
     fun solve(): Number {
         var operationsResult: Double = numbers[0]
         for (index in operations.indices){
