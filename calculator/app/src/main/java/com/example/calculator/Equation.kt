@@ -95,6 +95,9 @@ class Equation(var notation: String = "") {
     }
 
     fun solve(): Number {
+        decode()
+        equationSimplify()
+        decode()
         var operationsResult: Double = numbers[0]
         for (index in operations.indices){
             when(operations[index]){
@@ -103,12 +106,6 @@ class Equation(var notation: String = "") {
                 }
                 '-' -> {
                     operationsResult -= numbers[index+1]
-                }
-                'X' ->{
-
-                }
-                '/' ->{
-
                 }
                 '=' -> return  operationsResult
             }
