@@ -4,8 +4,8 @@ class Equation(var notation: String = "") {
 
     //private val integerElements: List<Char> = listOf('0','1','2','3','4','5','6','7','8','9')
     private val operationElements: List<Char> = listOf('+','-','/','X', '^','=')
-    val numbers = mutableListOf<Double>()
-    val operations = mutableListOf<Char>()
+    private val numbers = mutableListOf<Double>()
+    private val operations = mutableListOf<Char>()
 
     fun addElement(newElement: String){
         notation += newElement
@@ -26,7 +26,6 @@ class Equation(var notation: String = "") {
         val equationElements: MutableList<Char> = notation.toMutableList()
         var numberStart = 0 // current number beginning index
         var numberEnd = 0 // current Operation Index
-        var currentNumber = 0.0
         for (index in equationElements.indices){
             when(equationElements[index]){
                 in operationElements -> {
@@ -39,7 +38,7 @@ class Equation(var notation: String = "") {
         }
     }
 
-    fun equationSimplify(){
+    fun simplify(){
         var simplify = true
         while (simplify){
             var currentOperationIndex = 0
@@ -89,10 +88,7 @@ class Equation(var notation: String = "") {
                             tmpOperationResult.toString() + notation.subSequence(rightOperation, notation.length).toString()
                 else
                     notation = notation.subSequence(0, leftOperation + 1)
-                            .toString() + tmpOperationResult.toString() + notation.subSequence(
-                            rightOperation,
-                            notation.length
-                    ).toString()
+                            .toString() + tmpOperationResult.toString() + notation.subSequence(rightOperation, notation.length).toString()
                 decode()
             }
         }
@@ -100,7 +96,7 @@ class Equation(var notation: String = "") {
 
     fun solve(): Number {
         decode()
-        equationSimplify()
+        simplify()
         decode()
         var operationsResult: Double = numbers[0]
         for (index in operations.indices){
