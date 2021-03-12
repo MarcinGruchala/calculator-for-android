@@ -106,8 +106,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnUndo.setOnClickListener(){
-            screen = screen.dropLast(1)
-            equation.removeLastElement()
+            screen = ""
+            equation.clear()
             updateScreen(screen)
         }
 
@@ -115,6 +115,7 @@ class MainActivity : AppCompatActivity() {
             val clickedSign =  "+"
             screen += clickedSign
             equation.addElement(clickedSign)
+
             updateScreen(screen)
 
         }
@@ -152,10 +153,10 @@ class MainActivity : AppCompatActivity() {
 
         btnEqual.setOnClickListener(){
             val clickedSign =  "="
-            screen += clickedSign
             equation.addElement(clickedSign)
+            equation.decode()
+            screen += clickedSign + equation.solve()
             updateScreen(screen)
-
         }
     }
 
